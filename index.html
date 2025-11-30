@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANHKO GAMES</title>
 
+    <!-- FUENTE FUTURISTA -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: black;
+            color: white;
+        }
+
+        /* Fondo glitch */
+        .hero {
+            height: 100vh;
+            background: url('TU_IMAGEN.png') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Capa oscura para lectura */
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(2px);
+        }
+
+        .hero-content {
+            z-index: 2;
+        }
+
+        .title {
+            font-size: 4rem;
+            color: #b44bff;
+            text-shadow: 0 0 20px #b44bff, 0 0 30px #ff0059;
+            animation: glow 3s infinite alternate;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #ffffffd6;
+            margin-top: -10px;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #b44bff; }
+            100% { text-shadow: 0 0 25px #ff0059; }
+        }
+
+        /* Secciones */
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #c36aff;
+            text-shadow: 0 0 10px #c36aff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            color: #e8e8e8;
+            text-align: center;
+        }
+
+        /* Glitch line */
+        .glitch-line {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #ff0059, #b44bff, #ff0059);
+            margin: 40px 0;
+            animation: glitchMove 2s infinite linear;
+        }
+
+        @keyframes glitchMove {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border: 2px solid #b44bff6c;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            border-color: #ff0059;
+            text-shadow: 0 0 10px #ff0059;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #0b0b0b;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PORTADA -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="title">ANHKO GAMES</h1>
+            <p class="subtitle">"Donde el sonido desciende… y tu espíritu asciende."</p>
+        </div>
+    </div>
+
+    <div class="glitch-line"></div>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="about">
+        <h2>¿Quiénes Somos?</h2>
+        <p>ANHKO GAMES es una microempresa enfocada en el desarrollo de videojuegos rítmicos 
+            que fusionan música, reflejos y estética digital glitch. Creamos experiencias que combinan 
+            energía, ritmo y un estilo visual único inspirado en el caos tecnológico.</p>
+    </section>
+
+    <div class="glitch-line"></div>
+
+    <!-- PROJECT BEATS -->
+    <section id="project">
+        <h2>Project Beats</h2>
+        <p>Un videojuego donde la música no solo acompaña… sino que domina. Cada patrón, 
+            cada destello y cada golpe visual está sincronizado al ritmo para generar una experiencia 
+            intensa, dinámica y desafiante.</p>
+
+        <div class="cards">
+            <div class="card">🎵 Jugabilidad guiada por música</div>
+            <div class="card">⚡ Estética glitch vibrante</div>
+            <div class="card">🎮 Accesible, intuitivo y veloz</div>
+            <div class="card">🌌 Mundo visual único</div>
+        </div>
+    </section>
+
+    <div class="glitch-line"></div>
+
+    <!-- EQUIPO -->
+    <section id="team">
+        <h2>Nuestro Equipo</h2>
+        <div class="cards">
+            <div class="card"><b>Christofer</b><br>Líder & Diseñador Gráfico</div>
+            <div class="card"><b>Asbel</b><br>Programador</div>
+            <div class="card"><b>Saúl</b><br>Analista</div>
+            <div class="card"><b>Christian</b><br>Operación Técnica</div>
+            <div class="card"><b>Yael</b><br>Comunicación</div>
+            <div class="card"><b>Tovar</b><br>Documentación</div>
+        </div>
+    </section>
+
+    <div class="glitch-line"></div>
+
+    <!-- CONTACTO -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Puedes conocer más sobre nuestro proyecto en la feria empresarial o siguiendo nuestro desarrollo.</p>
+        <p><b>anhkogames@contact.com</b></p>
+    </section>
+
+    <footer>
+        ANHKO GAMES © 2025 – Proyecto estudiantil desarrollado con pasión, ritmo y creatividad.
+    </footer>
+
+</body>
+</html>
